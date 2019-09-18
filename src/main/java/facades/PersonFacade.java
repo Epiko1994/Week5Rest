@@ -65,7 +65,12 @@ public class PersonFacade implements IPersonFacade {
 
     @Override
     public List<Person> getAllPersons() {
-        return null;
+        EntityManager em = getEntityManager();
+        try{
+            return em.createNamedQuery("Person.getAllRows").getResultList();
+        }finally{
+            em.close();
+        }
     }
 
     @Override
