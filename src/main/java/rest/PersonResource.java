@@ -50,7 +50,4 @@ public class PersonResource {
         return "{\"count\":"+count+"}";  //Done manually so no need for a DTO
     }
 
-
-
- 
 }
